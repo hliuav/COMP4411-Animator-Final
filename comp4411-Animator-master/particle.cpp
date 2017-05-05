@@ -22,7 +22,7 @@ void Particle::nextPos(float deltaT) {
 	Vec3d k3 = (speed + netForce / mass*(3 / 2)*deltaT);
 	Vec3d k4 = (speed + netForce / mass*(4 / 2)*deltaT);
 	speed += netForce/mass * deltaT;
-	position += k2 * deltaT;
+	position +=(0.166666)*(k1+2*k2+2*k3+k4)* deltaT;
 }
 
 void Particle::draw() {
